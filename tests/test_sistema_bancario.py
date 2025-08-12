@@ -3,7 +3,9 @@ Testes de integração para o sistema bancário
 """
 
 import pytest
-from src import SistemaBancario, ContaBancaria
+import sys
+sys.path.insert(0, '.')
+from src.banco import ContaBancaria, SistemaBancario
 
 
 @pytest.fixture

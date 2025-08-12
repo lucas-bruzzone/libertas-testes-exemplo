@@ -3,7 +3,9 @@ Testes unitários para a classe Calculadora
 """
 
 import pytest
-from src import Calculadora
+import sys
+sys.path.insert(0, '.')
+from src.calculadora import Calculadora
 
 
 class TestCalculadora:
