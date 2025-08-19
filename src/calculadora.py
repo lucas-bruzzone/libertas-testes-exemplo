@@ -7,6 +7,10 @@ class Calculadora:
     
     def soma(self, a, b):
         """Retorna a soma de dois números"""
+        if a is None or b is None:
+            raise ValueError("Parâmetros não podem ser None")
+        if isinstance(a, str) or isinstance(b, str):
+            raise TypeError("Parâmetros devem ser numéricos")
         return a + b
     
     def subtracao(self, a, b):

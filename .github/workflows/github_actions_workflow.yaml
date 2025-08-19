@@ -25,7 +25,7 @@ jobs:
     
     - name: Executar testes
       run: |
-        pytest --cov=src --cov-report=term-missing --cov-report=xml
+        pytest --cov=src --cov-report=term-missing --cov-report=xml -v
     
     - name: Upload cobertura
       uses: codecov/codecov-action@v3

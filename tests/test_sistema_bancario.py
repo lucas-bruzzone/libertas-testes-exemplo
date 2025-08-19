@@ -132,3 +132,16 @@ def test_transferencia_parametrizada(valor_transferencia, sucesso_esperado, sald
     
     resultado = sistema.transferir("origem", "destino", valor_transferencia)
     assert resultado == sucesso_esperado
+    
+    
+def test_consultar_contas_validas(sistema_bancario):
+    """Testa consulta de contas válidas"""
+    conta1 = sistema_bancario.obter_conta("001")
+    conta2 = sistema_bancario.obter_conta("002")
+    
+    assert conta1 is not None
+    assert conta2 is not None
+    assert conta1.numero == "001"
+    assert conta2.numero == "002"
+    
+    transferir = 200
